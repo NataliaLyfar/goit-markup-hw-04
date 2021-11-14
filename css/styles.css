@@ -2,6 +2,8 @@
   --primary-color: #ffffff;
   --primary-shade-color: #f5f4fa;
   --secondary-color: #2f303a;
+  --tertiary-color: #c4c4c4;
+  --tertiary-shade-color: rgba(47, 48, 58, 0.4);
   --primary-text-color: #757575;
   --shadow-text-color: rgba(255, 255, 255, 0.6);
   --secondary-text-color: #000000;
@@ -111,8 +113,13 @@ img {
 .header-contact-item:first-child {
   margin-right: 50px;
 }
+
 .contact-link {
   color: inherit;
+}
+.contact-link-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 .nav-link,
 .contact-link {
@@ -135,8 +142,19 @@ img {
 /* Шапка */
 .main-section {
   padding: 200px 0;
-
-  background-color: var(--secondary-color);
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      var(--tertiary-shade-color),
+      var(--tertiary-shade-color)
+    ),
+    url("../images/background-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--tertiary-color);
 
   text-align: center;
 }
@@ -189,6 +207,16 @@ img {
 }
 .feature-item:not(:first-child) {
   margin-left: 30px;
+}
+.thumb {
+  width: 270px;
+  height: 120px;
+  background-color: var(--primary-shade-color);
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+.feature-icon {
+  fill: currentColor;
 }
 .feature-subtitle {
   margin-bottom: 10px;
